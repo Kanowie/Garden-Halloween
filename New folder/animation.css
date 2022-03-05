@@ -4,7 +4,7 @@
   height: 400px;
   position: relative;
   left: 20%;
-  background: rgb(82, 229, 240);
+  background: rgb(82, 229, 240); 
 }
 #animate {
   width: 50px;
@@ -33,6 +33,9 @@
   top: 30px;
   left: 20px;
   z-index: 4;
+  box-shadow: 0 0 50px 10px #fff,  /* inner white */
+    /* 0 0 100px 40px rgb(255, 174, 0), */
+    0 0 140px 40px rgb(255, 153, 0); /* middle magenta */
   background: linear-gradient(to right, rgb(255, 124, 18), rgb(230, 245, 19));
 }
 
@@ -43,11 +46,11 @@
   position: absolute;
   top: -60px;
   left: 20px;
-  box-shadow: inset -12px 5px 0 3px #eee1c1;
+  box-shadow: inset -12px 5px 0 3px #f8e072;
   border-radius: 50%;
   line-height: 10rem;
 }
 
 h1{
-    color: rgb(253, 187, 63);
+  color: linear-gradient(to right, rgb(49, 53, 104), rgb(230, 245, 19));
 }

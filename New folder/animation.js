@@ -1,3 +1,5 @@
+const toNight = document.getElementById("container");
+
 function allTogether() {
   flamingoMove();
   zombieMove();
@@ -44,11 +46,13 @@ function sunMove() {
   clearInterval(id);
   id = setInterval(frame, 8);
   function frame() {
-    if (pos == 450) {
+    if (pos == 480) {
       clearInterval(id);
     } else {
       pos++;
       elem.style.top = pos + 'px';
+      toNight.style.background = "rgb(49, 53, 104)";
+      toNight.style.transition = "all 5.5s";
     }
   }
 }
@@ -66,5 +70,11 @@ function moonMove() {
       pos++;
       elem.style.top = pos + 'px';
     }
+  }
+}
+
+function sunDown() {
+  if (sunMove.frame === 480) {
+    toNight.style.background = "black";
   }
 }
