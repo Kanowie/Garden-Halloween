@@ -7,23 +7,30 @@
   background: rgb(82, 229, 240); 
 }
 #animate {
-  width: 50px;
-  height: 50px;
+  width: 95px;
+  height: 100px;
   position: absolute;
   top: 220px;
   right: 180px;
   z-index: 6;
-  background: rgb(255, 85, 198);
+  /* background: rgb(255, 85, 198); */
 }
 
 #animate2 {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px; 
   position: absolute;
   top: 220px;
-  right: -70px;
-  background: rgb(51, 180, 34);
+  right: -90px;
+  /* background: rgb(51, 180, 34);  */
+  /* transform: scaleX(-1); */
 }
+
+/* #monster {
+  width: 50px;
+  height: auto;
+  position: relative;
+}  */
 
 #sun {
   width: 50px;
@@ -44,13 +51,14 @@
   height: 50px;
   border-radius: 50%;
   position: absolute;
-  top: -60px;
+  top: -90px;
   left: 20px;
-  box-shadow: inset -12px 5px 0 3px #f8e072;
+  /* box-shadow: inset -12px 5px 0 3px #f8e072; */
+  box-shadow: 8px 0px 4px #f8e072;
   border-radius: 50%;
   line-height: 10rem;
 }
 
 h1{
-  color: linear-gradient(to right, rgb(49, 53, 104), rgb(230, 245, 19));
-}
+color: white;
+  }

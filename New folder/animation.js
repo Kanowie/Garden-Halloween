@@ -1,24 +1,35 @@
 const toNight = document.getElementById("container");
+const runAway = document.getElementById("animate");
 
-function allTogether() {
-  flamingoMove();
-  zombieMove();
-  sunMove();
-  moonMove();
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+      flamingoMove();
+      zombieMove();
+      sunMove();
+      moonMove();
+    }
 }
+
+// function allTogether() {
+//   flamingoMove();
+//   zombieMove();
+//   sunMove();
+//   moonMove();
+// }
 
 function flamingoMove() {
   let id = null;
   const elem = document.getElementById("animate");
   let pos = 155;
   clearInterval(id);
-  id = setInterval(frame, 12);
+  id = setInterval(frame, 13);
   function frame() {
     if (pos == 450) {
       clearInterval(id);
     } else {
       pos++;
       elem.style.right = pos + 'px';
+      runAway.style.transform = 'scaleX(-1)';
     }
   }
 }
@@ -26,9 +37,9 @@ function flamingoMove() {
 function zombieMove() {
   let id = null;
   const elem = document.getElementById("animate2");
-  let pos = 0;
+  let pos = -80;
   clearInterval(id);
-  id = setInterval(frame, 11);
+  id = setInterval(frame, 13);
   function frame() {
     if (pos == 150) {
       clearInterval(id);
@@ -46,7 +57,7 @@ function sunMove() {
   clearInterval(id);
   id = setInterval(frame, 8);
   function frame() {
-    if (pos == 480) {
+    if (pos == 500) {
       clearInterval(id);
     } else {
       pos++;
@@ -70,11 +81,5 @@ function moonMove() {
       pos++;
       elem.style.top = pos + 'px';
     }
-  }
-}
-
-function sunDown() {
-  if (sunMove.frame === 480) {
-    toNight.style.background = "black";
   }
 }
